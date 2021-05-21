@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+a {
+        color: #0F89CA;
+      }
+body {
+  background-color:black;
+  padding: 20px;
+  font-family: CMU serif;
+}
+
+/* Center website */
+.main {
+  max-width: 1000px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 50px;
+  word-break: break-all;
+}
+
+.row {
+  margin: 10px -16px;
+}
+
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+  padding: 8px;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+  display: none; /* Hide all elements by default */
+}
+
+/* Clear floats after rows */ 
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  background-color: black;
+  padding: 4px;
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 18px;
+  background-color: #666;
+  cursor: pointer;
+  font-family: CMU serif;
+   color: white;
+}
+
+.btn:hover {
+  background-color:steelblue;
+}
+
+.btn.active {
+  background-color: forestgreen;
+  color: white;
+}
+</style>
+</head>
+<body>
+
+<!-- MAIN (Center website) -->
+<div class="main">
+<!-- <h1><font color="#OF89CA">AlgoPlankton</font>  </h2>-->
+
+<img src="./images/logo.png" alt="coccolithophore" style="width:20%">
+
+
+
+<div id="myBtnContainer">
+
+  <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+  <button class="btn" onclick="filterSelection('annelid')"> Annelids</button> 
+  <button class="btn" onclick="filterSelection('cnidarian')"> Cnidarians</button> 
+  <button class="btn" onclick="filterSelection('coccolithophore')"> Coccolithophores</button>
+  <button class="btn" onclick="filterSelection('crustacean')"> Crustaceans</button>
+  <button class="btn" onclick="filterSelection('diatom')"> Diatoms</button>
+  <button class="btn" onclick="filterSelection('dino')"> Dinoflagellates</button>
+  <button class="btn" onclick="filterSelection('foraminifera')"> Foraminifera</button>
+  <button class="btn" onclick="filterSelection('larva')"> Larvae</button> 
+
+</div>
+
+<!-- Portfolio Gallery Grid -->
+<div class="row">
+  <div class="column coccolithophore">
+    <div class="content">
+        <h4><center><font color="yellow">ASA ID: 224454507</font></center> </h4>
+    <img src="./images/PC0001.png" alt="coccolithophore" style="width:100%">
+    </div>
+  </div>
+  <div class="column foraminifera">
+    <div class="content">
+        <h4><center><font color="cyan">ASA ID: 224638234 </font></center> </h4>
+    <img src="./images/PC0002.png" alt="foraminifera" style="width:100%">
+
+    </div>
+  </div>
+  <div class="column diatom">
+    <div class="content">
+    <h4><center><font color="lime">ASA ID: 224631400</font></center> </h4>
+    <img src="./images/PC0003.png" alt="diatom" style="width:100%">
+
+    </div>
+  </div>
+    <div class="column crustacean">
+    <div class="content">
+        <h4><center><font color="orange">ASA ID: 224470009</font></center> </h4>
+    <img src="./images/PC0004.png" alt="annelid" style="width:100%">
+
+    </div>
+  </div>
+  <div class="column cnidarian">
+    <div class="content">
+        <h4><center><font color="steelblue">ASA ID: 224640071</font></center> </h4>
+      <img src="./images/PC0005.png" alt="crustacean" style="width:100%">
+
+    </div>
+  </div>
+  <div class="column larva">
+    <div class="content">
+        <h4><center><font color="forestgreen">ASA ID: 224743448</font></center> </h4>
+    <img src="./images/PC0006.png" alt="dino" style="width:100%">
+
+    </div>
+  </div>
+  <div class="column anannelid">
+    <div class="content">
+        <h4><center><font color="purple">ASA ID: 224746830</font></center> </h4>
+    <img src="./images/PC0007.png" alt="cnidarian" style="width:100%">
+
+    </div>
+  </div>
+  <div class="column dino">
+    <div class="content">
+        <h4><center><font color="maroon">ASA ID: 224473954</font></center> </h4>
+      <img src="./images/PC0008.png" style="width:100%">
+
+    </div>
+  </div>
+  
+<!-- END GRID -->
+</div>
+
+
+<p style="font-size:1vw;"><font color="white">ART:
+<a href="https://www.randgallery.com/algo-collection/?address=YQUVSXPXZB26F3MF3QH6EV5B6MUL4S6MYRC4T3J6XA3HP2KMFW4FKGWYIM"> YQUVSXPXZB26F3MF3QH6EV5B6MUL4S6MYRC4T3J6XA3HP2KMFW4FKGWYIM</a></p>
+
+
+<p style="font-size:1vw;"><font color="white">CARDS:
+<a href="https://www.randgallery.com/algo-collection/?address=OHTBEYBTCMF6AFZU6AYUUJAZB52BPKUBQOMISIIX3IO77FFZQJHFMYATLA"> OHTBEYBTCMF6AFZU6AYUUJAZB52BPKUBQOMISIIX3IO77FFZQJHFMYATLA</a></p>
+
+
+<!-- END MAIN -->
+</div>
+
+<script>
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+
+</body>
+</html>
+
