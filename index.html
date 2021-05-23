@@ -6,10 +6,10 @@
 * {
   box-sizing: border-box;
 }
-
+/* Set color links */
 a {
-        color: #0F89CA;
-      }
+   color: #0F89CA;
+}
 body {
   background-color:black;
   padding: 20px;
@@ -70,7 +70,8 @@ h1 {
   background-color: #666;
   cursor: pointer;
   font-family: CMU serif;
-   color: white;
+  color: white;
+  margin-bottom: 4px;
 }
 
 .btn:hover {
@@ -116,6 +117,7 @@ h1 {
   <button class="btn active" onclick="filterSelection('all')"> Show all</button>
   <button class="btn" onclick="filterSelection('annelid')"> Annelids</button> 
   <button class="btn" onclick="filterSelection('cnidarian')"> Cnidarians</button> 
+  <button class="btn" onclick="filterSelection('ctenophore')"> Ctenophores</button> 
   <button class="btn" onclick="filterSelection('coccolithophore')"> Coccolithophores</button>
   <button class="btn" onclick="filterSelection('crustacean')"> Crustaceans</button>
   <button class="btn" onclick="filterSelection('diatom')"> Diatoms</button>
@@ -154,11 +156,10 @@ h1 {
 
     </div>
   </div>
-  <div class="column cnidarian">
+  <div class="column ctenophore">
     <div class="content">
-        <h4><center><font color="steelblue">ASA ID: 224640071</font></center> </h4>
+        <h4><center><font color="steelblue">ASA ID: 226226376</font></center> </h4>
       <img src="./images/PC0005.png" alt="crustacean" style="width:100%">
-
     </div>
   </div>
   <div class="column larva">
@@ -179,6 +180,13 @@ h1 {
     <div class="content">
         <h4><center><font color="maroon">ASA ID: 224473954</font></center> </h4>
       <img src="./images/PC0008.png" style="width:100%">
+
+    </div>
+  </div>
+    <div class="column tunicate">
+    <div class="content">
+        <h4><center><font color="teal">ASA ID: 226278531</font></center> </h4>
+      <img src="./images/PC0009.png" style="width:100%">
 
     </div>
   </div>
